@@ -161,3 +161,8 @@ ul {
   }
 
 }
+
+.the-white {
+  background: white;
+  border: 2px solid grey;
+}

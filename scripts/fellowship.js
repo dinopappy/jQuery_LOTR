@@ -68,6 +68,7 @@ const makeHobbits = () => {
   // Goal: display an unordered list of hobbits in the shire (which is the first article tag on the page)
   // 1. create a 'ul'
   const $ul = $("<ul>")
+  $ul.attr("id", "hobbits")
   // 2. make each hobbit an li element and append it to the 'ul' you just created
     // hint: use the given 'hobbits' array and use a for loop
   for (hobbit of hobbits){
@@ -172,7 +173,7 @@ const beautifulStranger = () => {
 
   // 1. change the buddy 'Strider' textnode to "Aragorn"
      // hint: You can get a list of elements by tag name, such as 'aside'
-  const $buddies = $(".buddy")
+    const $buddies = $("buddies")
 $buddies.eq(3).text("Aragorn")
 };
 
@@ -195,12 +196,12 @@ const forgeTheFellowShip = () => {
 
   // 3. append the fellowship to middle-earth
 
-  $section.append("$h1a")
+  $("#middle-earth").append($div2)
 
   // 4. add the unordered lists of hobbits and buddies to 'the-fellowship'
 
-$h1a.append("$ul")
-$h1a.append("$ul3")
+$div2.append($ul)
+$div2.append($ul3)
 
 };
 
@@ -213,9 +214,9 @@ $h1a.append("$ul3")
 const theBalrog = () => {
 
   // 1. change the 'Gandalf' text to 'Gandalf the White'
-
+  buddies.eq(0).text("Gandalf the White")
   // 2. add a class "the-white" to this element
-
+  buddies.eq(0).attr("class", "the-white")
   // 3. in the style.css file, add a css rule to make elements of the class "the-white" have a white background and a grey border
 
 };
