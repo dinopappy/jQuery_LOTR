@@ -67,19 +67,18 @@ const makeMiddleEarth = () => {
 const makeHobbits = () => {
   // Goal: display an unordered list of hobbits in the shire (which is the first article tag on the page)
   // 1. create a 'ul'
-  const $ul = $("<ul>")
-  $ul.attr("id", "hobbits")
+  const $hobbits = $("<ul>")
+  $hobbits.attr("id", "hobbits")
   // 2. make each hobbit an li element and append it to the 'ul' you just created
     // hint: use the given 'hobbits' array and use a for loop
   for (hobbit of hobbits){
-    const $li = $("<li>").text(hobbit)
-    $ul.append($li)
+    const $hobbit = $("<li>").addClass('hobbit').text(hobbit)
+    $hobbits.append($hobbit)
   }
   // 3. also, give each hobbit (`li`) a class of "hobbit"
-  $("li").addClass("hobbit")
   // 4. append the ul to the shire
     // hint: get 'The-Shire' by using its id
-  $("#The-Shire").append($ul)
+  $("#The-Shire").append($hobbits)
 };
 
 // COMMIT YOUR WORK
@@ -89,13 +88,11 @@ const makeHobbits = () => {
 // Chapter 3
 // ============
 const keepItSecretKeepItSafe = () => {
-  console.log("keep it secret")
   // 1. create an empty div with an id of 'the-ring'
-  const $div = $("<div>")
-  $div.attr("id", "the-ring")
+  const $ring = $('<div>').attr('id', 'the-ring');
   // 2. add the ring as a child of Frodo
     // hint: Frodo does not have an id, but there is a command to retrieve all elements with a certain class. This should give you an array for you to access . . 
-  $("hobbits").eq(0).append($div)
+  $('.hobbit').eq(0).append($ring);
     // when you think you have given Frodo the ring, check in your Elements tab to see that it works correctly
 };
 
@@ -255,7 +252,8 @@ $frodo = $('#the-fellowship').children().eq(1).children().eq(0)
 $samwise = $('#the-fellowship').children().eq(1).children().eq(1)
 $('#Mordor').append($frodo).append($samwise)
   // 2. add a div with an id of 'mount-doom' to Mordor
-
+$mountDoom = $('<div>').attr('id', 'mount-doom')
+$('#Mordor').append($mountDoom)
 };
 
 // COMMIT YOUR WORK
@@ -267,7 +265,10 @@ $('#Mordor').append($frodo).append($samwise)
 const weWantsIt = () => {
 
   // 1. Create a div with an id of 'gollum' and add it to Mordor
-
+const $gollum = $('<div>').attr('id', 'gollum')
+$('#Morder').append($gollum)
+$gollum.append('#the-ring')
+$('#mount-doom').append($gollum)
   // 2. Move the ring from Frodo and give it to Gollum
 
   // 3. Move Gollum into Mount Doom
