@@ -111,8 +111,8 @@ const makeBaddies = () => {
   // 2. give each of the baddies a class of "baddy"
 
 for (baddy of baddies) {
-const $baddyLi = $("<li>").text(baddy)
-$baddies.append($baddyLi)
+const $baddy = $("<li>").addClass('baddy').text(baddy)
+$baddies.append($baddy)
 }
 
   // 3. remember to append the ul to Mordor
@@ -284,7 +284,9 @@ $('#mount-doom').append($gollum)
 const thereAndBackAgain = () => {
 
   // 1. remove Gollum and the Ring from the DOM
-
+$('#gollum').remove()
+$('#Morder').remove($('.baddy'))
+$('#The-Shire').append($('.hobbit'))
   // 2. remove all the baddies from the DOM
 
   // 3. Move all the hobbits back to the shire
