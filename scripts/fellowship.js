@@ -232,17 +232,15 @@ const theBalrog = () => {
 const hornOfGondor = () => {
 
   // 1. create a pop-up alert that the horn of gondor has been blown
-const $button = ("<button>")
-$button.attr("class", "gondor")
-$(".gondor").on("click", function() {
-  $(".popup", )
-})
+alert('The horn of gondor has been blown!')
+$('#the-fellowship').children().eq(2).children().eq(4).css("text-decoration", "line-through")
+$('#Mordor').children().eq(1).children().eq(2).remove()
+}
 
   // 2. Boromir's been killed by the Uruk-hai! Put a linethrough on Boromir's name
 
   // 3. Tricky: Remove the Uruk-Hai from the Baddies on the page
 
-};
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 10 complete - horn of gandor blew and Boromir is dead"
