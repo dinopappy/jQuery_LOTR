@@ -95,7 +95,7 @@ const keepItSecretKeepItSafe = () => {
   $div.attr("id", "the-ring")
   // 2. add the ring as a child of Frodo
     // hint: Frodo does not have an id, but there is a command to retrieve all elements with a certain class. This should give you an array for you to access . . 
-  $hobbits.eq(0).append($div)
+  $("hobbits").eq(0).append($div)
     // when you think you have given Frodo the ring, check in your Elements tab to see that it works correctly
 };
 
@@ -251,7 +251,9 @@ $('#Mordor').children().eq(1).children().eq(2).remove()
 const itsDangerousToGoAlone = () => {
 
   // 1. take Frodo and Sam out of the fellowship and move them to Mordor (they don't need to be inside a ul in Mordor)
-$(".hobbits")
+$frodo = $('#the-fellowship').children().eq(1).children().eq(0)
+$samwise = $('#the-fellowship').children().eq(1).children().eq(1)
+$('#Mordor').append($frodo).append($samwise)
   // 2. add a div with an id of 'mount-doom' to Mordor
 
 };
